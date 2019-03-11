@@ -14,6 +14,7 @@ import { ParseServerOptions } from './Options';
 // Factory function
 const _ParseServer = function(options: ParseServerOptions) {
   const server = new ParseServer(options);
+  server.app.config = server.config;
   return server.app;
 };
 // Mount the create liveQueryServer
